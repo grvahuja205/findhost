@@ -48,3 +48,19 @@ class AmmFinal(Base):
 	account_code = Column(String(10))
 	account_name = Column(String(100))
 
+engine = create_engine("mysql://root:root@localhost/findhost")
+
+Base.metadata.drop(AmiInitial, checkfirst=True)
+Base.metadata.create(AmiInitial, checkfirst=True)
+
+Base.metadata.drop(AmiFinal, checkfirst=True)
+Base.metadata.create(AmiFinal, checkfirst=True)
+
+Base.metadata.drop(MlmFinal, checkfirst=True)
+Base.metadata.create(MlmFinal, checkfirst=True)
+
+Base.metadata.drop(EkgFinal, checkfirst=True)
+Base.metadata.create(EkgFinal, checkfirst=True)
+
+Base.metadata.drop(AmmFinal, checkfirst=True)
+Base.metadata.create(AmmFinal, checkfirst=True)
